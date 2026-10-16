@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- include:head -->
+<title>Vurnexo — Productos digitales por suscripción</title>
+<meta name="description" content="Vurnexo crea productos digitales por suscripción que te ayudan a ahorrar tiempo y plata. Conocé Radar de Vuelos.">
+<meta property="og:title" content="Vurnexo">
+<meta property="og:description" content="Productos digitales por suscripción.">
+<meta property="og:image" content="{{url}}/assets/img/radar-de-vuelos-og.png">
+</head>
+<body>
+<!-- include:header -->
+<main>
+  <section class="brand-hero"><div class="wrap">
+    <h1>Herramientas chicas que te ahorran tiempo y plata.</h1>
+    <p class="muted">Vurnexo hace productos digitales por suscripción: cada uno resuelve una sola cosa, funciona solo y se cancela cuando quieras.</p>
+  </div></section>
+
+  <section id="productos" style="padding-top:0"><div class="wrap">
+    <h2>Productos</h2>
+    <ul class="catalog">
+      <li>
+        <a href="/radar-de-vuelos">
+          <img src="/assets/img/radar-de-vuelos.png" alt="" width="88" height="88">
+          <div>
+            <h3>{{radar.name}}</h3>
+            <p>Ofertas de vuelos internacionales desde tu ciudad, verificadas y avisadas en Telegram.</p>
+          </div>
+          <!-- if:radar.founderActive --><span class="price">desde USD {{radar.prices.monthlyFounder}}/mes</span><!-- endif:radar.founderActive -->
+          <!-- ifnot:radar.founderActive --><span class="price">desde USD {{radar.prices.monthly}}/mes</span><!-- endifnot:radar.founderActive -->
+        </a>
+      </li>
+    </ul>
+    <p class="muted" style="margin-top:20px">Pronto, más productos.</p>
+  </div></section>
+</main>
+<!-- include:footer -->
+</body>
+</html>

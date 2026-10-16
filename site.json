@@ -1,0 +1,41 @@
+{
+  "brand": "Vurnexo",
+  "url": "https://vurnexo.com",
+  "email": "anmauro.dev@gmail.com",
+  "legal": {
+    "name": "Mauro Nahuel Abraham",
+    "taxId": "CUIT 20-37143235-4",
+    "country": "Argentina",
+    "updated": "16 de octubre de 2026"
+  },
+  "radar": {
+    "name": "Radar de Vuelos",
+    "botUrl": "https://t.me/RadarDeVuelos_bot",
+    "termsUrl": "https://ofertas.vurnexo.com/terminos",
+    "guaranteeDays": 7,
+    "founderActive": true,
+    "prices": {
+      "monthly": "9,90",
+      "annual": "79",
+      "monthlyFounder": "6,90",
+      "annualFounder": "59"
+    },
+    "checkout": {
+      "monthly": "",
+      "annual": "",
+      "monthlyFounder": "",
+      "annualFounder": ""
+    },
+    "cities": [
+      { "country": "Argentina", "flag": "🇦🇷", "names": ["Buenos Aires", "Córdoba"] },
+      { "country": "Chile", "flag": "🇨🇱", "names": ["Santiago"] },
+      { "country": "Uruguay", "flag": "🇺🇾", "names": ["Montevideo"] },
+      { "country": "Paraguay", "flag": "🇵🇾", "names": ["Asunción"] },
+      { "country": "Perú", "flag": "🇵🇪", "names": ["Lima"] },
+      { "country": "Colombia", "flag": "🇨🇴", "names": ["Bogotá", "Medellín"] },
+      { "country": "México", "flag": "🇲🇽", "names": ["Ciudad de México", "Guadalajara", "Monterrey", "Cancún"] },
+      { "country": "Panamá", "flag": "🇵🇦", "names": ["Ciudad de Panamá"] },
+      { "country": "España", "flag": "🇪🇸", "names": ["Madrid", "Barcelona"] }
+    ]
+  }
+}

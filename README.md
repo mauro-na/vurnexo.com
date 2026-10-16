@@ -1,8 +1,10 @@
-# vurnexo-web
+# vurnexo.com
 
 Sitio de la marca **Vurnexo** (`vurnexo.com`): portada con el catálogo de productos, una página por producto, aviso legal y botón de arrepentimiento.
 
 Es un sitio estático. Lo sirve el Caddy del VPS (repo `bot-ofertas`) desde `/opt/vurnexo-web/public`.
+
+Primera vez en el VPS: `git clone https://github.com/mauro-na/vurnexo.com.git /opt/vurnexo-web`
 
 ## Editar
 

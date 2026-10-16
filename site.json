@@ -21,21 +21,81 @@
       "annualFounder": "59"
     },
     "checkout": {
-      "monthly": "",
-      "annual": "",
-      "monthlyFounder": "",
-      "annualFounder": ""
+      "monthly": "https://pay.hotmart.com/F108056057L?off=ot26ny1r",
+      "annual": "https://pay.hotmart.com/F108056057L?off=5wn5smui",
+      "monthlyFounder": "https://pay.hotmart.com/F108056057L?off=fug4w6f1",
+      "annualFounder": "https://pay.hotmart.com/F108056057L?off=weaarsif"
     },
     "cities": [
-      { "country": "Argentina", "flag": "🇦🇷", "names": ["Buenos Aires", "Córdoba"] },
-      { "country": "Chile", "flag": "🇨🇱", "names": ["Santiago"] },
-      { "country": "Uruguay", "flag": "🇺🇾", "names": ["Montevideo"] },
-      { "country": "Paraguay", "flag": "🇵🇾", "names": ["Asunción"] },
-      { "country": "Perú", "flag": "🇵🇪", "names": ["Lima"] },
-      { "country": "Colombia", "flag": "🇨🇴", "names": ["Bogotá", "Medellín"] },
-      { "country": "México", "flag": "🇲🇽", "names": ["Ciudad de México", "Guadalajara", "Monterrey", "Cancún"] },
-      { "country": "Panamá", "flag": "🇵🇦", "names": ["Ciudad de Panamá"] },
-      { "country": "España", "flag": "🇪🇸", "names": ["Madrid", "Barcelona"] }
+      {
+        "country": "Argentina",
+        "flag": "🇦🇷",
+        "names": [
+          "Buenos Aires",
+          "Córdoba"
+        ]
+      },
+      {
+        "country": "Chile",
+        "flag": "🇨🇱",
+        "names": [
+          "Santiago"
+        ]
+      },
+      {
+        "country": "Uruguay",
+        "flag": "🇺🇾",
+        "names": [
+          "Montevideo"
+        ]
+      },
+      {
+        "country": "Paraguay",
+        "flag": "🇵🇾",
+        "names": [
+          "Asunción"
+        ]
+      },
+      {
+        "country": "Perú",
+        "flag": "🇵🇪",
+        "names": [
+          "Lima"
+        ]
+      },
+      {
+        "country": "Colombia",
+        "flag": "🇨🇴",
+        "names": [
+          "Bogotá",
+          "Medellín"
+        ]
+      },
+      {
+        "country": "México",
+        "flag": "🇲🇽",
+        "names": [
+          "Ciudad de México",
+          "Guadalajara",
+          "Monterrey",
+          "Cancún"
+        ]
+      },
+      {
+        "country": "Panamá",
+        "flag": "🇵🇦",
+        "names": [
+          "Ciudad de Panamá"
+        ]
+      },
+      {
+        "country": "España",
+        "flag": "🇪🇸",
+        "names": [
+          "Madrid",
+          "Barcelona"
+        ]
+      }
     ]
   }
 }

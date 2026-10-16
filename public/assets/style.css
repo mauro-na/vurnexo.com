@@ -74,7 +74,6 @@ section { padding: clamp(56px, 9vw, 104px) 0; }
 .foot ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
 .foot a { color: var(--muted); }
 .foot a:hover { color: var(--ink); }
-.foot .regret { color: var(--ink); font-weight: 600; }
 @media (max-width: 720px) { .foot .wrap { grid-template-columns: 1fr; } }
 
 /* ───────── Portada de la marca ───────── */

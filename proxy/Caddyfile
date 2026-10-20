@@ -1,0 +1,41 @@
+# Proxy común de Vurnexo.
+# Agregar un producto: copiar el bloque de Radar de Vuelos, cambiar el subdominio,
+# la página de ventas y el contenedor:puerto de su servicio web (conectado a la red vurnexo-proxy).
+# Aplicar cambios: /opt/vurnexo-web/actualizar.sh
+
+# ─── Sitio de la marca ───────────────────────────────────────────
+vurnexo.com {
+	encode zstd gzip
+	root * /srv/site
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		X-Frame-Options "DENY"
+		-Server
+	}
+	@assets path /assets/*
+	header @assets Cache-Control "public, max-age=604800"
+	try_files {path} {path}.html {path}/index.html
+	file_server
+	handle_errors {
+		@404 expression {err.status_code} == 404
+		handle @404 {
+			rewrite * /404.html
+			file_server
+		}
+		respond "{err.status_code} {err.status_text}"
+	}
+}
+
+www.vurnexo.com {
+	redir https://vurnexo.com{uri} permanent
+}
+
+# ─── 01 · Radar de Vuelos (/opt/bot-ofertas) ─────────────────────
+ofertas.vurnexo.com {
+	encode gzip
+	@raiz path /
+	redir @raiz https://vurnexo.com/radar-de-vuelos 302
+	reverse_proxy bot-ofertas:3000
+}

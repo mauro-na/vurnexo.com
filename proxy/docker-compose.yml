@@ -1,0 +1,33 @@
+# Proxy común de Vurnexo: un solo Caddy para todos los productos del VPS.
+# Sirve el sitio de la marca (../public) y reparte cada subdominio al servicio web de su producto.
+# Es lo único del VPS que abre los puertos 80 y 443.
+name: vurnexo-proxy
+
+services:
+  caddy:
+    image: caddy:2.10-alpine
+    container_name: vurnexo-proxy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./:/etc/caddy:ro             # carpeta entera (no el archivo suelto) para que git pull se vea adentro
+      - ../public:/srv/site:ro       # sitio de la marca (este mismo repo)
+      - caddy_data:/data             # certificados HTTPS
+      - caddy_config:/config
+    networks:
+      - vurnexo-proxy
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "5" }
+
+networks:
+  # Red compartida: cada producto conecta acá SOLO su servicio web.
+  # La crea instalar.sh (docker network create vurnexo-proxy).
+  vurnexo-proxy:
+    external: true
+
+volumes:
+  caddy_data:
+  caddy_config:
